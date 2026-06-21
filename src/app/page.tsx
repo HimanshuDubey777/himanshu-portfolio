@@ -508,7 +508,7 @@ export default function Home() {
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Hi Alex, I'd love to work together..."
+                  placeholder="Hi Himanshu, I'd love to work together..."
                   className="form-input interactive-element"
                 />
               </div>

@@ -39,7 +39,7 @@ export interface PortfolioData {
 
 export const portfolioData: PortfolioData = {
   personalInfo: {
-    name: "Alex Rivera",
+    name: "Himanshu Dubey",
     title: "Senior Full Stack Engineer",
     subtitle: "I build responsive, pixel-perfect experiences for the web.",
     bio: "Focused on crafting high-performance, accessible web applications at the intersection of design and scale.",
@@ -62,7 +62,7 @@ export const portfolioData: PortfolioData = {
       },
       {
         platform: "Email",
-        url: "mailto:alex@rivera.dev",
+        url: "mailto:himanshu@dubey.dev",
         iconName: "email"
       }
     ]

@@ -26,7 +26,7 @@ const REFACTOR_PROMPTS: RefactorPrompt[] = [
   { broken: "return ( <div>hello )", fixed: "return ( <div>hello</div> );", description: "Unterminated HTML JSX tags in return statement" },
   { broken: "console.log(val", fixed: "console.log(val);", description: "Unbalanced parentheses in print log trace" },
   { broken: "app.listen(3000, () =>", fixed: "app.listen(3000, () => {});", description: "Incomplete arrow callback bracket scopes" },
-  { broken: "const user = { name: \"Alex\"", fixed: "const user = { name: \"Alex\" };", description: "Missing closing curly bracket brace in object declaration" }
+  { broken: "const user = { name: \"Himanshu\"", fixed: "const user = { name: \"Himanshu\" };", description: "Missing closing curly bracket brace in object declaration" }
 ];
 
 interface HackQuestion {
@@ -1039,12 +1039,12 @@ export default function Playground() {
 
     if (!command) return;
 
-    setHistory(prev => [...prev, { text: `rivera-dev@guest:~$ ${command}`, type: "input" }]);
+    setHistory(prev => [...prev, { text: `himanshu-dev@guest:~$ ${command}`, type: "input" }]);
     executeCommand(command);
   };
 
   const runQuickCommand = (cmd: string) => {
-    setHistory(prev => [...prev, { text: `rivera-dev@guest:~$ ${cmd}`, type: "input" }]);
+    setHistory(prev => [...prev, { text: `himanshu-dev@guest:~$ ${cmd}`, type: "input" }]);
     executeCommand(cmd);
   };
 
@@ -1120,7 +1120,7 @@ export default function Playground() {
               <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#fbbf24" }} />
               <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#10b981" }} />
               <span style={{ color: "rgba(16, 185, 129, 0.4)", fontSize: "0.75rem", marginLeft: "12px" }}>
-                bash - rivera-dev@guest:~/playground
+                bash - himanshu-dev@guest:~/playground
               </span>
             </div>
             
@@ -1433,7 +1433,7 @@ export default function Playground() {
           {/* Shell input prompt */}
           {!isPlayingSnake && !isPlayingRefactor && !isPlayingHack && !isPlayingBlast && (
             <form onSubmit={handleCommandSubmit} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <span style={{ color: "#34d399", fontWeight: "700" }}>rivera-dev@guest:~$</span>
+              <span style={{ color: "#34d399", fontWeight: "700" }}>himanshu-dev@guest:~$</span>
               <input
                 ref={inputRef}
                 type="text"
