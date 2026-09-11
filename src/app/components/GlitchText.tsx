@@ -2,7 +2,7 @@
 
 import React from "react";
 
-interface GlitchTextProps {
+interface GlitchTextProps 
   text: string;
   className?: string;
 }
