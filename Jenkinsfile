@@ -24,9 +24,27 @@ pipeline {
     post {
         success {
             echo 'Build successful!'
+            emailext (
+                subject: "SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: """<p>Build Successful!</p>
+                         <p><b>Job:</b> ${env.JOB_NAME}</p>
+                         <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
+                         <p><b>Console Output:</b> <a href='${env.BUILD_URL}'>${env.BUILD_URL}</a></p>""",
+                to: 'himanshu09ask@gmail.com',
+                mimeType: 'text/html'
+            )
         }
         failure {
             echo 'Build failed. Check logs above.'
+            emailext (
+                subject: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: """<p>Build Failed!</p>
+                         <p><b>Job:</b> ${env.JOB_NAME}</p>
+                         <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
+                         <p><b>Console Output:</b> <a href='${env.BUILD_URL}'>${env.BUILD_URL}</a></p>""",
+                to: 'himanshu09ask@gmail.com',
+                mimeType: 'text/html'
+            )
         }
     }
 }
